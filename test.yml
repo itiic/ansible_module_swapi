@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost
+
+  tasks:
+    - name: Test that my module works
+      swapi:
+        area: "people"
+        id: 1
+        field: "name"
+      register: result
+
+    - debug: var=result
